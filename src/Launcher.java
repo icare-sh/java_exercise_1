@@ -9,6 +9,24 @@ public class Launcher {
             if (str.equals("quit")) {
                 break; 
             }
+            else if (str.equals("fibo")) {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Donner un nombre entier positif: ");
+                int num = scan.nextInt();
+                int n1 = 1, n2 = 1, n3 = 0;
+                if (num == 0 || num == 1) {
+                    System.out.println("Fibo: " + n1);    
+                }
+                else {
+                    for (int i = 2; i <= num; i++) {
+                        n3 = n2 + n1;
+                        n1 = n2;
+                        n2 = n3;
+                    }
+                    System.out.println("Fibo: " + n3);
+                }
+
+            }
             else {
                 System.out.println("Unknown command");
             }
