@@ -23,7 +23,7 @@ public class Launcher {
                         n1 = n2;
                         n2 = n3;
                     }
-                    System.out.println("Fibo: " + n3);
+                    System.out.println("Fibo: " + n1);
                 }
 
             }
