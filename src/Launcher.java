@@ -14,16 +14,24 @@ public class Launcher {
     list.add(new Fibo());
     list.add(new Freq());
     list.add(new Predict());
-    boolean var = false;
-        System.out.println("Welecome to the best program of the world!!");
-    while (!var) {
-      Scanner scanner = new Scanner(System.in);
+    System.out.println("Welecome to the best program of the world!!");
+
+    Scanner scanner = new Scanner(System.in);
+    do {
       String str = scanner.nextLine();
-        for (Command elt : list){
-            if (elt.name().equals(str)) {
-                var = elt.run(scanner);
-            }
+
+      boolean var = false;
+      for (Command elt : list) {
+        if (elt.name().equals(str)) {
+          if (elt.run(scanner))
+            return;
+
+          var = true;
         }
       }
-    }
+      if (!var)
+        System.out.println("Unknown command");
+
+    }while(true);
+  }
 }

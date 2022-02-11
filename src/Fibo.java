@@ -17,14 +17,13 @@ public class Fibo  implements Command{
     if (num == 0 || num == 1) {
       System.out.println("Fibo: " + n1);
     } else {
-      for (int i = 2; i <= num; i++) {
+      for (int i = 2; i < num; i++) {
         n3 = n2 + n1;
         n1 = n2;
         n2 = n3;
       }
-      System.out.println("Fibo: " + n1);
+      System.out.println("Fibo: " + n2);
     }
-
     return false;
   }
 }
