@@ -13,6 +13,7 @@ public class Launcher {
     list.add(new Quit());
     list.add(new Fibo());
     list.add(new Freq());
+    list.add(new Predict());
     boolean var = false;
         System.out.println("Welecome to the best program of the world!!");
     while (!var) {
